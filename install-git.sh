@@ -26,6 +26,7 @@ gitinstall() {
  
   printf "${BLUE}Installing Git...${NORMAL}\n"
   sudo apt-get -y install \
+    subversion \
     git
   
   printf "${BLUE}Configuring Git...${NORMAL}\n"
