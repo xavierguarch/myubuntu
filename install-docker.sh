@@ -39,6 +39,7 @@ minimal() {
   fi
 
   sudo apt-get update
+  # dumb comment
   apt-cache policy docker-engine
   # sudo apt-get -y purge lxc-docker
   sudo apt-get -y upgrade
