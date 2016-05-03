@@ -27,33 +27,14 @@ minimal() {
   ###################################
   # Docker
   printf "${BLUE}Installing Docker, docker-machine and docker-compose...${NORMAL}\n"
-  sudo apt-get -y install apt-transport-https ca-certificates
-  sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
   
-  if [ ! -e /etc/apt/sources.list.d/docker.list ]; then
-      # 14.04 LTS
-      # echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /tmp/docker.list
-      # 16.04 LTS (new default version)
-      echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" > /tmp/docker.list
-      sudo mv /tmp/docker.list /etc/apt/sources.list.d/docker.list
-  fi
-
-  sudo apt-get update
-  apt-cache policy docker-engine
-  # sudo apt-get -y purge lxc-docker
-  sudo apt-get -y upgrade
-  sudo apt-get -y install linux-image-extra-$(uname -r)
-  sudo apt-get -y install apparmor
-
-  # This is not in docker reference doc (maybe needed on beta 16.04 LTS only)
-  ## sudo apt-get -y install cgroupfs-mount
-  # This is not in docker reference doc (maybe needed on beta 16.04 LTS only)
-  ## sudo apt-get -y install aufs-tools
-
-  sudo apt-get -y install docker-engine
+  # Docker Engine
+  printf "${BLUE}Installing docker-engine...${NORMAL}\n"
+  curl -sSL https://get.docker.com/ | sh
+  
   sudo usermod -aG docker $USER
   printf "${YELLOW}You must logout and login to use Docker without sudo... (use sudo docker... meanwhile)${NORMAL}\n"
-  
+    
   # Docker Compose i Machine
   printf "${BLUE}Installing docker-compose...${NORMAL}\n"
   curl -L https://github.com/docker/compose/releases/download/1.7.0/docker-compose-`uname -s`-`uname -m` > /tmp/docker-compose
