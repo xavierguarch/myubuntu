@@ -30,7 +30,7 @@ gitinstall() {
     git
   
   printf "${BLUE}Configuring Git...${NORMAL}\n"
-  svn checkout https://github.com/jig/myubuntu/trunk/gitconfig
+  svn checkout https://github.com/jig/myubuntu/trunk/gitconfig ~/
 }
 
 # Check if reboot is needed
