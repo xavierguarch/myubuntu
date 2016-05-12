@@ -24,6 +24,9 @@ distroupgrade() {
   # which may fail on systems lacking tput or terminfo
   set -e
  
+  # resolve apt-get slow connections
+  echo "Acquire::http::No-Cache true;\nAcquire::http::Pipeline-Depth 0;" | sudo tee /etc/apt/apt.conf.d/80http > /dev/null
+
   printf "${BLUE}Upgrading Ubuntu...${NORMAL}\n"
   sudo apt-get update
   sudo apt-get -y dist-upgrade
