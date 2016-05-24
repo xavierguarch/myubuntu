@@ -45,6 +45,17 @@ minimal() {
   curl -L https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-`uname -s`-`uname -m` > /tmp/docker-machine 
   sudo mv /tmp/docker-machine /usr/local/bin/docker-machine 
   sudo chmod +x /usr/local/bin/docker-machine
+
+  # Docker credentials
+  printf "${BLUE}Installing docker-credential-secretservice...${NORMAL}\n"
+  curl -L https://github.com/docker/docker-credential-helpers/releases/download/v0.2.0/docker-credential-secretservice-v0.2.0-amd64.tar.gz > /tmp/docker-credential-secretservice.tar.gz
+  tar -xvf /tmp/docker-credential-secretservice.tar.gz
+  sudo mv docker-credential-secretservice /usr/local/bin/docker-credential-secretservice
+  sudo chmod +x /usr/local/bin/docker-credential-secretservice
+  
+  # Configure docker to use docker-credential-secretservice (gnome keyring)
+  printf "${BLUE}Configuring docker-credential-secretservice...${NORMAL}\n"
+  grep -q -G 'credsStore' ~/.docker/config.json && sed -i '/credsStore/c\"credsStore": "secretservice",' ~/.docker/config.json || sed -i '$i"credsStore": "secretservice",' ~/.docker/config.json
 }
 
 # Check if reboot is needed
