@@ -54,8 +54,10 @@ minimal() {
   sudo chmod +x /usr/local/bin/docker-credential-secretservice
   
   # Configure docker to use docker-credential-secretservice (gnome keyring)
-  printf "${BLUE}Configuring docker-credential-secretservice...${NORMAL}\n"
-  grep -q -G 'credsStore' ~/.docker/config.json && sed -i '/credsStore/c\"credsStore": "secretservice",' ~/.docker/config.json || sed -i '$i"credsStore": "secretservice",' ~/.docker/config.json
+  printf "${BLUE}${BOLD}In order to configure docker-credential-secretservice add the following line on ~/.docker/config.json: ${NORMAL}\n"
+  printf "${YELLOW}{\n\t\"credsStore\": \"secretservice\"\n\t...\n}${NORMAL}\n"
+  # When docker-credential-secretservice support docker-compose pull this can be uncommented -v
+  # grep -q -G 'credsStore' ~/.docker/config.json && sed -i '/credsStore/c\"credsStore": "secretservice",' ~/.docker/config.json || sed -i '2i"credsStore": "secretservice",' ~/.docker/config.json
 }
 
 # Check if reboot is needed
