@@ -33,9 +33,7 @@ byobu() {
       byobu-ctrl-a emacs
 
       cat > ~/.byobu/.tmux.conf <<EOF
-set -g mouse-select-pane on
-set -g mouse-select-window on
-set -g mouse-resize-pane on
+set -g mouse on
 set -g mouse-utf8 on
 set -g default-shell /usr/bin/zsh
 set -g default-command /usr/bin/zsh
