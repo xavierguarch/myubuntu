@@ -59,6 +59,12 @@ everything() {
   # Docker, Docker Compose, Docker Machiney
   bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/$BRANCH/install-docker.sh -O -)"
   
+  # Java
+  bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/$BRANCH/install-java.sh -O -)"
+  
+  # Google Chrome
+  bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/$BRANCH/install-chrome.sh -O -)"
+  
   # Final recommendations
   printf "${YELLOW}Installation finished. A REBOOT is recommended now.${NORMAL}\n"
 }
