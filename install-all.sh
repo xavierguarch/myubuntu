@@ -56,7 +56,10 @@ everything() {
   
   bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/$BRANCH/install-visualstudiocode.sh -O -)"
 
-  # Docker, Docker Compose, Docker Machiney
+  # nodejs
+  bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/$BRANCH/install-nodejs.sh -O -)"
+  
+  # Docker, Docker Compose, Docker Machine
   bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/$BRANCH/install-docker.sh -O -)"
   
   # Java
