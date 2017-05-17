@@ -25,10 +25,10 @@ install_nodejs() {
   set -e
  
   ###################################
-  # Visual Studio Code (Microsoft)
+  # NodeJS 6 LTS
   printf "${BLUE}Installing Nodejs...${NORMAL}\n"
   sudo apt-get -y install curl
-  curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
   sudo apt-get -y install nodejs
 }
 
