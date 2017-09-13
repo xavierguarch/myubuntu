@@ -48,7 +48,7 @@ minimal() {
 
   # Docker credentials
   printf "${BLUE}Installing docker-credential-secretservice...${NORMAL}\n"
-  curl -L https://github.com/docker/docker-credential-helpers/releases/download/v0.2.0/docker-credential-secretservice-v0.2.0-amd64.tar.gz > /tmp/docker-credential-secretservice.tar.gz
+  curl -L https://github.com/docker/docker-credential-helpers/releases/download/v0.6.0/docker-credential-secretservice-v0.2.0-amd64.tar.gz > /tmp/docker-credential-secretservice.tar.gz
   tar -xvf /tmp/docker-credential-secretservice.tar.gz
   sudo mv docker-credential-secretservice /usr/local/bin/docker-credential-secretservice
   sudo chmod +x /usr/local/bin/docker-credential-secretservice
