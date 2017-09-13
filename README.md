@@ -22,6 +22,14 @@ You can install just one item just invoking one of the `install-?.sh` scripts; f
 bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/master/install-awscli.sh -O -)"
 ```
 
+# VMware
+
+If you are installing a virtual machine (VMware) it is recomeded to install its drivers (they are not installed by default)
+
+```shell
+bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/master/install-vmguest.sh -O -)"
+```
+
 ## note
 
 `install.sh` script (was) based on [robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
