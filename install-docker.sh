@@ -37,18 +37,18 @@ minimal() {
     
   # Docker Compose i Machine
   printf "${BLUE}Installing docker-compose...${NORMAL}\n"
-  curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` > /tmp/docker-compose
+  curl -L https://github.com/docker/compose/releases/download/latest/docker-compose-`uname -s`-`uname -m` > /tmp/docker-compose
   sudo mv /tmp/docker-compose /usr/local/bin/docker-compose
   sudo chmod +x /usr/local/bin/docker-compose
 
   printf "${BLUE}Installing docker-machine...${NORMAL}\n"
-  curl -L https://github.com/docker/machine/releases/download/v0.12.2/docker-machine-`uname -s`-`uname -m` > /tmp/docker-machine 
+  curl -L https://github.com/docker/machine/releases/download/latest/docker-machine-`uname -s`-`uname -m` > /tmp/docker-machine 
   sudo mv /tmp/docker-machine /usr/local/bin/docker-machine 
   sudo chmod +x /usr/local/bin/docker-machine
 
   # Docker credentials
   printf "${BLUE}Installing docker-credential-secretservice...${NORMAL}\n"
-  curl -L https://github.com/docker/docker-credential-helpers/releases/download/v0.6.0/docker-credential-secretservice-v0.2.0-amd64.tar.gz > /tmp/docker-credential-secretservice.tar.gz
+  curl -L https://github.com/docker/docker-credential-helpers/releases/download/v0.6.0/docker-credential-secretservice-v0.6.0-amd64.tar.gz > /tmp/docker-credential-secretservice.tar.gz
   tar -xvf /tmp/docker-credential-secretservice.tar.gz
   sudo mv docker-credential-secretservice /usr/local/bin/docker-credential-secretservice
   sudo chmod +x /usr/local/bin/docker-credential-secretservice
