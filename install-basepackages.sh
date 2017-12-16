@@ -33,8 +33,7 @@ basepackages() {
     emacs24-nox \
     byobu \
     openssh-server \
-    openssh-client \
-    terminator    
+    openssh-client
 }
 
 # Check if reboot is needed
