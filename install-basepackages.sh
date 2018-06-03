@@ -30,7 +30,7 @@ basepackages() {
     wget \
     git \
     zsh \
-    emacs24-nox \
+    emacs-nox \
     byobu \
     openssh-server \
     openssh-client
