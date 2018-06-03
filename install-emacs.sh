@@ -26,7 +26,7 @@ emacsinstall() {
  
   printf "${BLUE}Installing Emacs...${NORMAL}\n"
   sudo apt-get -y install \
-    emacs24-nox \
+    emacs-nox \
     subversion
   
   printf "${BLUE}Configuring Emacs...${NORMAL}\n"
