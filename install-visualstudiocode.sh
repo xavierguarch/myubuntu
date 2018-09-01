@@ -65,7 +65,8 @@ vsc() {
     "go.gopath": "~/git",
     "go.gocodeAutoBuild": false,
     "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13
 }
 EOF
     fi
