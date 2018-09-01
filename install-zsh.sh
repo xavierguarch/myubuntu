@@ -26,8 +26,7 @@ zsh() {
  
   # oh-my-zsh
   printf "${BLUE}Installing Oh-my-zsh...${NORMAL}\n"
-  # echo -n "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | sed -e "s/env zsh//" > /tmp/install-zsh.sh
-  echo -n "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" | sed -e "s/env zsh//" > /tmp/install-zsh.sh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   chmod 700 /tmp/install-zsh.sh
   bash -c /tmp/install-zsh.sh
   sed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"agnoster\"/" ~/.zshrc  
