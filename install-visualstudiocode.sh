@@ -23,6 +23,16 @@ vsc() {
   # Only enable exit-on-error after the non-critical colorization stuff,
   # which may fail on systems lacking tput or terminfo
   set -e
+
+
+  printf "${BLUE}Installing Fira Code fonts...${NORMAL}\n"
+  mkdir -p ~/.local/share/fonts
+  for type in Bold Light Medium Regular Retina
+  do 
+      wget -O ~/.local/share/fonts/FiraCode-$type.ttf "https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-$type.ttf?raw=true"
+  done
+  fc-cache -f
+  printf "${YELLOW}Fira Code fonts installed${NORMAL}\n"
  
   ###################################
   # Visual Studio Code (Microsoft)
@@ -53,7 +63,9 @@ vsc() {
     "go.formatTool": "goreturns",
     "go.goroot": "~/go",
     "go.gopath": "~/git",
-    "go.gocodeAutoBuild": false
+    "go.gocodeAutoBuild": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true
 }
 EOF
     fi
