@@ -68,7 +68,7 @@ EOF
 
   # Install debugging, testing, linting tools (Meet Visual Studio Code 1.0.0 requirements)
   printf "${BLUE}Installing some Go tools...${NORMAL}\n"
-  go get -u github.com/nsf/gocode
+  go get -u github.com/mdempsky/gocode
   go get -u github.com/rogpeppe/godef
   go get -u github.com/golang/lint/golint
   go get -u github.com/lukehoban/go-outline
