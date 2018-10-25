@@ -2,7 +2,7 @@
 
 Sets up my Ubuntu 16.04 Desktop System (experimental)
 
-To execute it, you must login with your username (must be sudoer) to a clean Ubuntu 16.04 Desktop installation:
+To execute it, you must login with your username (must be sudoer) to a clean Ubuntu 16.04/18.04 Desktop installation:
 
 ### Full Installation
 
