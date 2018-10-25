@@ -40,9 +40,6 @@ everything() {
   # emacs+minimal go syntax highlighting
   bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/$BRANCH/install-emacs.sh -O -)"
   
-  # ZSH+Oh-my-ZSH
-  bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/$BRANCH/install-zsh.sh -O -)"
-  
   # Byobu+ZSH
   bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/$BRANCH/install-byobu.sh -O -)"
   
@@ -68,6 +65,9 @@ everything() {
   # Google Chrome
   bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/$BRANCH/install-chrome.sh -O -)"
   
+  # ZSH+Oh-my-ZSH
+  bash -c "$(wget https://raw.githubusercontent.com/jig/myubuntu/$BRANCH/install-zsh.sh -O -)"
+
   # Final recommendations
   printf "${YELLOW}Installation finished. A REBOOT is recommended now.${NORMAL}\n"
 }
