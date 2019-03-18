@@ -70,7 +70,7 @@ EOF
   printf "${BLUE}Installing some Go tools...${NORMAL}\n"
   go get -u github.com/mdempsky/gocode
   go get -u github.com/rogpeppe/godef
-  go get -u github.com/golang/lint/golint
+  go get -u golang.org/x/lint/golint
   go get -u github.com/lukehoban/go-outline
   go get -u sourcegraph.com/sqs/goreturns
   go get -u golang.org/x/tools/cmd/gorename
